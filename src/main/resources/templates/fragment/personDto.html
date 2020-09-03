@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html layout:decorate="~{base}"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div class="row mb-2" layout:fragment="content-header">
+    <div class="col-sm-6">
+        <h1>Formulir Biodata</h1>
+    </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Formulir Biodata</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row" layout:fragment="content-body">
+    <div class="col-sm-12">
+        <!-- general form elements -->
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Form Biodata</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form role="form" id="form">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="nik" class="col-sm col-form-label">NIK</label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="nik">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nama" class="col-sm col-form-label">Nama</label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="nama">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
+                        <div class="col-sm-12">
+                            <input type="alamat" class="form-control" id="alamat">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nohp" class="col-sm col-form-label">No HP</label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="nohp">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                        <div class="col-sm-12">
+                            <input type="date" class="form-control date" id="date">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tempatLahir" class="col-sm col-form-label">Tempat Lahir</label>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" id="tempatLahir">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <button type="button" class="btn btn-success float-right" id="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="card-cyan">
+            <div class="card-header">
+                <h3 class="card-title">Table Biodata</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="cariNik" class="col-sm col-form-label"></label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="cariNik" placeholder="Masukkan NIK">
+                    </div>
+                </div>
+                <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>HP</th>
+                        <th>Tanggal lahir</th>
+                        <th>Tempat Lahir</th>
+                        <th>Umur</th>
+                        <th>Pendidikan Terakhir</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <div class="col-sm-12">
+        <!-- general form elements -->
+        <div class="card card-gray-dark">
+            <div class="card-header">
+                <h3 class="card-title">Form Pendidikan</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form role="form" id="formPendidikan">
+                <div class="card-body">
+                    <fieldset class="card card-outline card-cyan">
+                        <div class="form-group ">
+                            <label class="col-sm-2 col-form-label">Jenjang</label>
+                            <div class="col-sm-12">
+                                <label class="mr-sm-2 sr-only" for="jenjang">Preference</label>
+                                <select class="custom-select mr-sm-2" id="jenjang">
+                                    <option selected>Pilih...</option>
+                                    <option value="sd">SD</option>
+                                    <option value="smp">SMP</option>
+                                    <option value="sma">SMA</option>
+                                    <option value="s1">S1</option>
+                                    <option value="s2">S2</option>
+                                    <option value="s3">S3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="institusi" class="col-sm col-form-label">Institusi</label>
+                            <div class="col-sm">
+                                <input type="text" class="form-control" id="institusi">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tahunMasuk" class="col-sm-2 col-form-label">Tahun Masuk</label>
+                            <div class="col-sm-12">
+                                <input type="alamat" class="form-control" id="tahunMasuk">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tahunLulus" class="col-sm col-form-label">Tahun Lulus</label>
+                            <div class="col-sm">
+                                <input type="text" class="form-control" id="tahunLulus">
+                            </div>
+                        </div>
+                    </fieldset>
+                        <fieldset class="">
+                            <div class="form-group" id="additional"></div>
+                        </fieldset>
+                    <button type="button" class="btn btn-primary float-right addForm" href="javascript:void(0);">Add</button>
+<!--                        <a href="javascript:void(0);" class="addForm">Add</a>-->
+                </div>
+            </form>
+            <div class="card-footer">
+                <button type="button" class="btn btn-success float-right" id="btn2">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<th:block layout:fragment="add-scripts">
+    <script>
+        $(document).ready(function () {
+            $(".addForm").click(function () {
+                $("#additional").append(
+                    '<fieldset class="card card-outline card-cyan">'+
+                    '<div class="form-group" id="add">' +
+                    '<label class="col-sm-2 col-form-label">Jenjang</label>' +
+                    '<div class="col-sm-12">' +
+                    ' <label class="mr-sm-2 sr-only" for="jenjang">Preference</label>' +
+                    '<select class="custom-select mr-sm-2" id="jenjang">' +
+                    '   <option selected>Pilih...</option>' +
+                    '<option value="sd">SD</option>' +
+                    '<option value="smp">SMP</option>' +
+                    '<option value="sma">SMA</option>' +
+                    '<option value="s1">S1</option>' +
+                    '<option value="s2">S2</option>' +
+                    '<option value="s3">S3</option>' +
+                    '</select>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                    '<label for="institusi" class="col-sm col-form-label">Institusi</label>' +
+                    '<div class="col-sm">' +
+                    '<input type="text" class="form-control" id="institusi">' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                    ' <label for="tahunMasuk" class="col-sm-2 col-form-label">Tahun Masuk</label>' +
+                    ' <div class="col-sm-12">' +
+                    ' <input type="alamat" class="form-control" id="tahunMasuk">' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="form-group">' +
+                    '<label for="tahunLulus" class="col-sm col-form-label">Tahun Lulus</label>' +
+                    '<div class="col-sm">' +
+                    '<input type="text" class="form-control" id="tahunLulus">' +
+                    ' </div>' +
+                    '</div>' +
+                    '<button type="button" class="btn btn-danger float-left addForm" href="javascript:void(0);">Remove</button>'+
+                    '<a href="javascript:void(0);" class="remAdd">Remove</a>' +
+                    ' </div>'+
+                    '</fieldset>'
+                );
+            });
+            $('#additional').on('click', '.remAdd', function () {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="../../assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../assets/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../assets/dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                let nik = $("#nik").val();
+                let date = $(".date").val();
+                let nama = $("#nama").val();
+                let alamat = $("#alamat").val();
+                let hp = $("#nohp").val();
+                let tempatLahir = $("#tempatLahir").val();
+
+
+                Swal.fire(
+                    'Data Anda Terkirim',
+                    '',
+                    'success'
+                )
+                markup =
+                    "<tr>" +
+                    "<td>" + nik + "</td>" +
+                    "<td>" + nama + "</td>" +
+                    "<td>" + alamat + "</td>" +
+                    "<td>" + hp + "</td>" +
+                    "<td>" + date + "</td>" +
+                    "<td>" + tempatLahir + "</td>" +
+                    "</tr>";
+                tableBody = $("table tbody");
+                tableBody.append(markup);
+            });
+        });
+
+    </script>
+
+
+</th:block>
+
+</body>
+</html>
